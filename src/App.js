@@ -6,18 +6,17 @@ import GalleryPhotos from './pages/GalleryPhotos';
 import Catalog from './pages/Catalog';
 import Advertising from './pages/Advertising';
 
-
 function App() {
   return (
-    <div>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='login' element={<Login />}/>
-        <Route path='galleryPhotos' element={<GalleryPhotos />}/>
-        <Route path='catalog' element={<Catalog />}/>
-        <Route path='advertising' element={<Advertising />}/>
-      </Routes>
-    </div>
+      <div>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='login' element={<Login />} />
+          <Route path='galleryPhotos' element={<GalleryPhotos />} />
+          <Route path='catalog' element={<Catalog />} />
+          <Route path='advertising' element={<Advertising />} />
+        </Routes>
+      </div>
   );
 }
 

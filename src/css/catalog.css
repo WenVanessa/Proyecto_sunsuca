@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'BwSeidoRoundDEMO'; /* Nombre que le das a la fuente */
+    src: url('../fonts/BwSeidoRoundDEMO-Black.otf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BwSeidoRoundDEMO2'; /* Nombre que le das a la fuente */
+    src: url('../fonts/BwSeidoRoundDEMO-Regular.otf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Thonburi'; /* Nombre que le das a la fuente */
+    src: url('../fonts/thonburi-bold.ttf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header y navegación */
+.header {
+    background-color: #a4d555;
+    color: white;
+    padding: 1rem;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    padding-right: 30px;
+}
+
+.logo-img {
+    width: 10cm;  
+    height: 4cm;  
+    object-fit: contain;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    gap: 1rem; /* Ajustar el espacio entre los elementos */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    display: inline-flex; /* Ajusta el tamaño al contenido */
+    align-items: center; /* Centra el texto y el ícono verticalmente */
+    font-size: 1rem; /* Tamaño de fuente más pequeño */
+    font-family: 'BwSeidoRoundDEMO'; /* Aplica la fuente personalizada */
+}
+
+.nav-list li a {
+    display: inline-flex; /* Asegura que el link se ajuste al contenido */
+    align-items: center; /* Alinea el texto y el ícono */
+    text-decoration: none; /* Quita subrayados */
+    color: white; /* Color del texto */
+    padding: 0.2rem 0.5rem; /* Reduce el espacio interno */
+    border-radius: 4px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición para el hover */
+    gap: 0.3rem; /* Espacio entre el texto y el ícono */
+}
+
+.nav-list li a:hover {
+    background-color: #004d4d; /* Color de fondo en hover */
+}
+
+.nav-list li svg {
+    font-size: 1.4rem; /* Tamaño del ícono */
+    color: white;
+}
+
+/* Titulo */
+
+.title h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: 'BwSeidoRoundDEMO2';
+    color: #dca31d;
+}
+
+/* Card servicios */
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Ajusta el tamaño mínimo */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: start; /* Alinea las tarjetas al principio del eje vertical */
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    max-width: 300px;
+    background-color: #fff;
+}

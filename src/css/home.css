@@ -1,0 +1,222 @@
+@font-face {
+    font-family: 'BwSeidoRoundDEMO'; /* Nombre que le das a la fuente */
+    src: url('../fonts/BwSeidoRoundDEMO-Black.otf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BwSeidoRoundDEMO2'; /* Nombre que le das a la fuente */
+    src: url('../fonts/BwSeidoRoundDEMO-Regular.otf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Thonburi'; /* Nombre que le das a la fuente */
+    src: url('../fonts/thonburi-bold.ttf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header y navegación */
+.header {
+    background-color: #a4d555;
+    color: white;
+    padding: 1rem;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    padding-right: 30px;
+}
+
+.logo-img {
+    width: 10cm;  
+    height: 4cm;  
+    object-fit: contain;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    gap: 1rem; /* Ajustar el espacio entre los elementos */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    display: inline-flex; /* Ajusta el tamaño al contenido */
+    align-items: center; /* Centra el texto y el ícono verticalmente */
+    font-size: 1rem; /* Tamaño de fuente más pequeño */
+    font-family: 'BwSeidoRoundDEMO'; /* Aplica la fuente personalizada */
+}
+
+.nav-list li a {
+    display: inline-flex; /* Asegura que el link se ajuste al contenido */
+    align-items: center; /* Alinea el texto y el ícono */
+    text-decoration: none; /* Quita subrayados */
+    color: white; /* Color del texto */
+    padding: 0.2rem 0.5rem; /* Reduce el espacio interno */
+    border-radius: 4px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición para el hover */
+    gap: 0.3rem; /* Espacio entre el texto y el ícono */
+}
+
+.nav-list li a:hover {
+    background-color: #004d4d; /* Color de fondo en hover */
+}
+
+.nav-list li svg {
+    font-size: 1.4rem; /* Tamaño del ícono */
+    color: white;
+}
+
+/* Fin del header */
+
+/* Sección Hero */
+.hero-section {
+    background-color: #d9faa5;
+    padding: 5rem 0;
+    text-align: center;
+}
+  
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: 'BwSeidoRoundDEMO2';
+}
+  
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    font-family: 'BwSeidoRoundDEMO2';
+}
+
+/* Sección de Servicios */
+.services-section {
+    padding: 1rem 0;
+}
+
+.services-section h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: 'BwSeidoRoundDEMO2';
+    color: #004d4d;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: white;
+    border: 2px solid #004d4d; /* Borde del mismo color que el texto */
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    text-align: center; /* Centrar contenido */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(1.05); /* Efecto de zoom */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-family: 'BwSeidoRoundDEMO2';
+    color: #004d4d;
+}
+
+.service-card p {
+    font-size: 1rem;
+    font-family: 'Thonburi'; /* Aplica otra fuente personalizada */
+    line-height: 1.5;
+    margin-top: 0.5rem;
+}
+
+.service-image {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: 200px; /* Define una altura fija para mantener consistencia */
+    object-fit: cover; /* Recorta la imagen para llenar el contenedor, manteniendo proporciones */
+    border-radius: 0.5rem; /* Aplica bordes redondeados a la imagen */
+    transition: transform 0.3s ease; /* Transición suave para hover */
+}
+
+.service-image:hover {
+    transform: scale(1.05); /* Efecto de zoom en hover */
+}
+  
+/* Sección de Información */
+.info-section {
+    padding: 1rem 0;
+}
+  
+.info-section h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: 'BwSeidoRoundDEMO2';
+}
+  
+.info-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+  
+.info-content p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    font-family: 'Thonburi';
+}
+
+/* Footer */
+.footer {
+    background-color: #004d4d;
+    color: white;
+    padding: 2rem 0;
+}
+  
+.footer-content {
+    display: flex;
+    padding: 0 2rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+  
+.footer-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-family: 'BwSeidoRoundDEMO2';
+}
+  
+.footer-contact h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-family: 'BwSeidoRoundDEMO2'
+}
+
+.footer-contact p {
+    font-family: 'Thonburi'
+}
+
+.footer-info p {
+    font-family: 'Thonburi'
+}
+
+  
