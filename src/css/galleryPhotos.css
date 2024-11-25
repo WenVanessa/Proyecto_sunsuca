@@ -81,106 +81,28 @@
     color: white;
 }
 
-/* Main */ 
-.main-container{
-    align-items: center;
-    justify-content: center;
+/* Fin del header */
+.iniciativa {
+    background-color: #d9faa5;
+    padding: 2rem 0;
+    text-align: center;
 }
 
-/* Titulo */
+.iniciativa h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: 'BwSeidoRoundDEMO2';
+    color:#004d4d; 
+}
 
-.title h1 {
-    font-size: 2rem;
-    text-align: center;
+.iniciativa p {
+    font-size: 1.25rem;
     margin-bottom: 2rem;
     font-family: 'BwSeidoRoundDEMO2';
-    color: #dca31d;
 }
 
-/* Card servicios */
-
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Ajusta el tamaño mínimo */
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: start; /* Alinea las tarjetas al principio del eje vertical */
-}
-
-.card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 16px;
-    max-width: 300px;
-    background-color: #fff;
-}
-
-/* Estilos del formulario */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Aumenta el espacio entre los elementos */
-    max-width: 1050px; /* Aumenta el ancho máximo del formulario */
-    padding: 50px; /* Añade padding dentro del formulario para más espacio */
-    margin: 15px 65px;
-    background-color: #a4d555;
-    border-radius: 8px; /* Añade bordes redondeados para un diseño más suave */
-}
-
-input, textarea {
-    padding: 10px;
-    font-size: 16px; /* Aumenta el tamaño de la fuente */
-    border: none;
-    border-radius: 5px; /* Borde redondeado en los inputs */
-    width: 100%; /* Asegura que los campos ocupen todo el ancho disponible */
-}
-
-textarea {
-    resize: vertical;
-}
-
-.button-form {
-    padding: 12px 20px;
-    font-size: 16px;
-    background-color: #45a049;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.button-form:hover {
-    background-color: white;
-    color: #45a049;
-}
-
-/* Mostrar los servicios seleccionados */
-.selected-services {
-    margin-top: 1px;
-}
-
-.selected-services ul {
-    list-style: none;
-    padding: 0;
-}
-
-.selected-services li {
-    margin-bottom: 10px;
-}
-
-.selected-services h3 {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.selected-services p {
-    font-size: 18px;
-    font-weight: bold;
+.gallery {
+    margin: 20px 0px;
 }
 
 /* Footer */
@@ -217,4 +139,3 @@ textarea {
 .footer-info p {
     font-family: 'Thonburi'
 }
-

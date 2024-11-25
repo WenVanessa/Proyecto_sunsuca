@@ -16,34 +16,34 @@ const services = [
         id: 'sembrado-ecologico',
         title: 'Sembrado Ecológico',
         description: 'Técnicas de siembra que respetan el medio ambiente y maximizan la producción.',
-        price: 1000, 
+        price: 600000, 
         image: sembradoEcologico,
     },
     {
         id: 'riego-automatico',
         title: 'Riego Automático',
         description: 'Sistemas inteligentes de riego que optimizan el uso del agua en grandes extensiones.',
-        price: 1500,
+        price: 50000,
         image: regadoAutomatico,
     },
     {
         id: 'cuidado-medio-ambiente',
         title: 'Cuidado del Medio Ambiente',
         description: 'Asesoría y implementación de prácticas agrícolas sostenibles.',
-        price: 800, 
+        price: 700000, 
         image: cuidadoAmbiente,
     },
     {
         id: 'procesamiento-residuos',
         title: 'Procesamiento de Residuos',
         description: 'Gestión eficiente de residuos agrícolas para minimizar el impacto ambiental.',
-        price: 1200, 
+        price: 80000, 
         image: procesamientoResiduos,
     }
 ];
 
 function Catalog() {
-    const [selectedService, setSelectedService] = useState('');
+    const [selectedServices, setSelectedServices] = useState([]);
     const [notification, setNotification] = useState({ message: '', type: '' });
 
     const handleSubmit = (event) => {
@@ -54,7 +54,7 @@ function Catalog() {
         const email = formData.get('email')?.toString() || '';
         const message = formData.get('message')?.toString() || '';
 
-        console.log({ name, email, selectedService, message });
+        console.log({ name, email, selectedServices, message });
 
         // Configura la notificación
         setNotification({
@@ -67,6 +67,17 @@ function Catalog() {
             setNotification({ message: '', type: '' });
         }, 5000);
     };
+
+    const handleServiceSelect = (service) => {
+        setSelectedServices((prevSelected) => {
+            if (prevSelected.some(item => item.id === service.id)) {
+                return prevSelected.filter(item => item.id !== service.id); // Elimina el servicio si ya está seleccionado
+            }
+            return [...prevSelected, service]; // Agrega el servicio si no está seleccionado
+        });
+    };
+
+    const totalPrice = selectedServices.reduce((total, service) => total + service.price, 0);
 
     return (
         <div>
@@ -85,7 +96,7 @@ function Catalog() {
                 </nav>
                 <Outlet />
             </header>
-            <main>
+            <main className='main-container'>
                 <div className='title'>
                     <h1>SUNSUCA - NUESTROS SERVICIOS</h1>
                 </div>
@@ -101,7 +112,7 @@ function Catalog() {
                                 <p className="text-lg font-semibold">Precio: ${service.price}</p>
                             </CardContent>
                             <CardFooter>
-                                <button onClick={() => setSelectedService(service.id)}>Seleccionar</button>
+                                <button onClick={() => handleServiceSelect(service)}>Seleccionar</button>
                             </CardFooter>
                         </Card>
                     ))}
@@ -110,8 +121,36 @@ function Catalog() {
                     <input type="text" name="name" placeholder="Nombre" required />
                     <input type="email" name="email" placeholder="Correo electrónico" required />
                     <textarea name="message" placeholder="Mensaje" required></textarea>
-                    <button type="submit">Enviar</button>
+
+                    {/* Mostrar los servicios seleccionados */}
+                    <div className="selected-services">
+                        <h3>Servicios Seleccionados:</h3>
+                        <ul>
+                            {selectedServices.map(service => (
+                                <li key={service.id}>
+                                    {service.title} - ${service.price}
+                                </li>
+                            ))}
+                        </ul>
+                        {/* Mostrar el precio total */}
+                        <p><strong>Total: ${totalPrice}</strong></p>
+                    </div>
+
+                    <button className='button-form' type="submit">Enviar</button>
                 </form>
+                <footer id="contacto" className="footer">
+                    <div className="footer-content">
+                    <div className="footer-info">
+                        <h3>SUNSUCA</h3>
+                        <p>Innovación y sostenibilidad en el agro</p>
+                    </div>
+                    <div className="footer-contact">
+                        <h4>Contáctanos</h4>
+                        <p>Email: info@sunsuca.com</p>
+                        <p>Teléfono: (123) 456-7890</p>
+                    </div>
+                    </div>
+                </footer>
             </main>
         </div>
     );

@@ -1,0 +1,311 @@
+@font-face {
+    font-family: 'BwSeidoRoundDEMO'; /* Nombre que le das a la fuente */
+    src: url('../fonts/BwSeidoRoundDEMO-Black.otf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BwSeidoRoundDEMO2'; /* Nombre que le das a la fuente */
+    src: url('../fonts/BwSeidoRoundDEMO-Regular.otf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Thonburi'; /* Nombre que le das a la fuente */
+    src: url('../fonts/thonburi-bold.ttf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header y navegación */
+.header {
+    background-color: #a4d555;
+    color: white;
+    padding: 1rem;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    padding-right: 30px;
+}
+
+.logo-img {
+    width: 10cm;  
+    height: 4cm;  
+    object-fit: contain;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    gap: 1rem; /* Ajustar el espacio entre los elementos */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    display: inline-flex; /* Ajusta el tamaño al contenido */
+    align-items: center; /* Centra el texto y el ícono verticalmente */
+    font-size: 1rem; /* Tamaño de fuente más pequeño */
+    font-family: 'BwSeidoRoundDEMO'; /* Aplica la fuente personalizada */
+}
+
+.nav-list li a {
+    display: inline-flex; /* Asegura que el link se ajuste al contenido */
+    align-items: center; /* Alinea el texto y el ícono */
+    text-decoration: none; /* Quita subrayados */
+    color: white; /* Color del texto */
+    padding: 0.2rem 0.5rem; /* Reduce el espacio interno */
+    border-radius: 4px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición para el hover */
+    gap: 0.3rem; /* Espacio entre el texto y el ícono */
+}
+
+.nav-list li a:hover {
+    background-color: #004d4d; /* Color de fondo en hover */
+}
+
+.nav-list li svg {
+    font-size: 1.4rem; /* Tamaño del ícono */
+    color: white;
+}
+
+/* Fin del header */
+
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'BwSeidoRoundDEMO2';
+    color: #004d4d;
+}
+
+.paragraph {
+    font-size: 18px;
+    font-family: 'Thonburi';
+}
+
+.boton1 {
+    background-color: #004d4d;
+    color: white;
+    font-family: 'BwSeidoRoundDEMO2';
+    font-size: 13px; /* Aumenta el tamaño del texto */
+    padding: 8px 15px; /* Ajusta el relleno interno */
+    width: auto; /* Ajusta el ancho según el contenido */
+    border: none;
+    border-radius: 5px; /* Añade bordes redondeados opcionalmente */
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.boton1:hover {
+    background-color: #ffffff; /* Cambia el fondo al pasar el cursor */
+    color: #004d4d; /* Asegura que el texto permanezca visible */
+    border: 2px solid #004d4d;
+}
+
+/* Actividades y publicidad principal */
+.activities {
+    padding: 0px 10px 15px 10px;
+    width: 100%;
+    margin: 15px 0px;
+    background-color: #004d4d;
+    border-radius: 10px; /* Opcional: esquinas redondeadas */
+    box-sizing: border-box;
+}
+
+.title2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'BwSeidoRoundDEMO2';
+    color: white;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-content {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    width: 100%; /* Asegura que el contenedor ocupe el 100% */
+    gap: 10px; /* Espacio entre los elementos */
+}
+
+.carousel-item {
+    min-width: 47%; /* Reducir el tamaño del recuadro */
+    text-align: center;
+    padding: 8px; /* Reducir el padding */
+    margin: 0 5px;
+    border: 2px solid white;
+    border-radius: 8px;
+    background-color: #004d4d;
+}
+
+.carousel-image {
+    width: 80%;  /* Hacer las imágenes más pequeñas */
+    height: 160px;  /* Reducir la altura de las imágenes */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Ajustar el tamaño del texto en el carrusel */
+.carousel-item h3 {
+    font-size: 1.2rem; /* Reducir el tamaño del título */
+    margin: 10px 0;
+    color: white;
+    font-family: 'BwSeidoRoundDEMO2';
+}
+
+.carousel-item p {
+    font-size: 0.9rem; /* Reducir el tamaño del párrafo */
+    color: white;
+    font-family: 'Thonburi';
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.carousel-prev {
+    left: 1rem;
+}
+
+.carousel-next {
+    right: 1rem;
+}
+
+#testimonials .grid {
+    display: flex; /* Cambiar de grid a flex */
+    gap: 1rem; /* Espacio pequeño entre los elementos */
+    flex-wrap: nowrap; /* Evita que los elementos se envuelvan a la siguiente línea */
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    flex: 1; /* Permite que las tarjetas se ajusten al espacio disponible */
+}
+
+.say {
+    font-family: 'Thonburi';
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.title3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'BwSeidoRoundDEMO2';
+    color: #004d4d;
+}
+
+/* Contacto */ 
+.contact {
+    background-color: #007a7a;
+    border-radius: 10px; /* Opcional: esquinas redondeadas */
+    box-sizing: border-box;
+    padding: 0px 10px 15px 10px;
+    width: 100%;
+    margin: 10px 0px;
+    align-items: center;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'BwSeidoRoundDEMO2';
+    color: white;
+}
+
+.contact p {
+    font-size: 18px;
+    font-family: 'Thonburi';
+    color: white;
+}
+
+.contact button {
+    background-color: #004d4d;
+    color: white;
+    font-family: 'BwSeidoRoundDEMO2';
+    font-size: 13px; /* Aumenta el tamaño del texto */
+    padding: 8px 15px; /* Ajusta el relleno interno */
+    width: auto; /* Ajusta el ancho según el contenido */
+    border: none;
+    border-radius: 5px; /* Añade bordes redondeados opcionalmente */
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.contact button:hover {
+    background-color: #ffffff; /* Cambia el fondo al pasar el cursor */
+    color: #004d4d; /* Asegura que el texto permanezca visible */
+    border: 2px solid #004d4d;
+}
+
+/* Footer */
+.footer {
+    background-color: #004d4d;
+    color: white;
+    padding: 2rem 0;
+}
+  
+.footer-content {
+    display: flex;
+    padding: 0 2rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+  
+.footer-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-family: 'BwSeidoRoundDEMO2';
+}
+  
+.footer-contact h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-family: 'BwSeidoRoundDEMO2'
+}
+
+.footer-contact p {
+    font-family: 'Thonburi'
+}
+
+.footer-info p {
+    font-family: 'Thonburi'
+}

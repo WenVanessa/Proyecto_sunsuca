@@ -1,3 +1,24 @@
+@font-face {
+    font-family: 'BwSeidoRoundDEMO'; /* Nombre que le das a la fuente */
+    src: url('../fonts/BwSeidoRoundDEMO-Black.otf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BwSeidoRoundDEMO2'; /* Nombre que le das a la fuente */
+    src: url('../fonts/BwSeidoRoundDEMO-Regular.otf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Thonburi'; /* Nombre que le das a la fuente */
+    src: url('../fonts/thonburi-bold.ttf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
 .cards-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -29,17 +50,21 @@
 .card-title {
     font-size: 24px;
     font-weight: bold;
+    color: #dca31d;
+    font-family: 'BwSeidoRoundDEMO2';
 }
 
 .card-description {
-    font-size: 18px;
-    color: #555;
+    font-size: 16px;
+    color: #000000;
+    font-family: 'Thonburi';
 }
 
 .card-content {
     margin-top: 2px;
-    font-size: 18px;  /* Aumentar tamaño del precio igual que la descripción */
+    font-size: 16px;  /* Aumentar tamaño del precio igual que la descripción */
     margin-bottom: 16px;
+    font-family: 'Thonburi';
 }
       
 .card-footer {
@@ -56,8 +81,9 @@
 
 button {
     font-size: 18px;  /* Aumentar tamaño de fuente del botón */
+    font-family: 'Thonburi';
     padding: 10px 20px;  /* Hacer el botón más grande en tamaño */
-    background-color: #4CAF50;  /* Color de fondo del botón */
+    background-color: #dca31d;  /* Color de fondo del botón */
     color: white;  /* Color del texto del botón */
     border: none;
     border-radius: 5px;
@@ -66,7 +92,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #a4d555;
 }
 
   /* Aseguramos que en pantallas pequeñas se vean en una columna */
